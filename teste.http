@@ -1,0 +1,20 @@
+// Use este arquivo com a extensao do VSCode API REST
+@server=http://localhost/api/
+
+POST {{server}}categorias/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Categoria 1",
+}
+
+PUT {{server}}categorias/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Categoria atualizada 2",
+}
+
+GET {{server}}categorias HTTP/1.1
+
+DELETE {{server}}categorias/1 HTTP/1.1
