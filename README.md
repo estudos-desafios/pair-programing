@@ -21,6 +21,8 @@ Laravel 8 API: users (default) and categories
 ### To Run
 
 -   Requirements: Docker
+-   This project use the port 80 and 3306
+-   About Sail: https://laravel.com/docs/8.x/sail
 
 Clone
 `git clone https://github.com/estudos-2022/pair-programing.git pair-programing`
@@ -34,18 +36,15 @@ Install depedencies
 Inicializa os serviços
 `./vendor/bin/sail up`
 
-Copy the variable of enviroment, and revise the config
-`cp .env.example .env`
-
-Create the key
-`./vendor/bin/sail php artisan key:generate`
-
 Run migration to create the tables of database and seed together
-`./vendor/bin/sail php artisan migrate::refresh --seed`
+`./vendor/bin/sail php artisan migrate:refresh --seed`
 
--   About Sail: https://laravel.com/docs/8.x/sail
+After, visit the following address:
 
-After, visit the following address: http://localhost
+-   GET http://localhost/api/categorias (listar todas categorias)
+-   GET http://localhost/api/categorias/1 (listar a categoria com id = 1)
+
+Mais testes use o testes.http no VsCode ou Postman/Insomnia
 
 ## License
 

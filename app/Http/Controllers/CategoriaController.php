@@ -26,7 +26,7 @@ class CategoriaController extends Controller
     public function store()
     {
         $categoria = Categoria::create([
-            'nome' => 'Categoria Teste',
+            'nome' => 'Categoria Test',
         ]);
 
         $categoria->save();
@@ -43,9 +43,9 @@ class CategoriaController extends Controller
      */
     public function show($id)
     {
-        $user = Categoria::find($id);
+        $categoria = Categoria::find($id);
 
-        return $user;
+        return $categoria;
     }
 
     /** Update the speficied resource.
@@ -56,11 +56,11 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $updateUser = Categoria::find($id);
-        $updateUser->nome = $request->nome;
-        $updateUser->save();
+        $categoria = Categoria::find($id);
+        $categoria->nome = $request->nome;
+        $categoria->save();
 
-        return $updateUser;
+        return $categoria;
     }
 
     /**
@@ -71,10 +71,10 @@ class CategoriaController extends Controller
      */
     public function destroy($id)
     {
-        $deleteUser = Categoria::find($id);
+        $categoria = Categoria::find($id);
 
-        $deleteUser->delete();
+        $categoria->delete();
 
-        return $deleteUser;
+        return $categoria;
     }
 }
