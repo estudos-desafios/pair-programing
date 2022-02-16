@@ -2,7 +2,7 @@
 
 ## About This Challenge
 
-_LARAVEL_
+_SOLICITAÇÕES (EM PORTUGUÊS)_
 
 -   criar um novo projeto em LARAVEL
 -   conectar ao banco de dados
@@ -33,7 +33,7 @@ Enter in directory root of project
 Install depedencies
 `composer install`
 
-Inicializa os serviços
+Start the services
 `./vendor/bin/sail up`
 
 Run migration to create the tables of database and seed together
@@ -41,10 +41,10 @@ Run migration to create the tables of database and seed together
 
 After, visit the following address:
 
--   GET http://localhost/api/categorias (listar todas categorias)
--   GET http://localhost/api/categorias/1 (listar a categoria com id = 1)
+-   GET http://localhost/api/categorias (list all categories)
+-   GET http://localhost/api/categorias/1 (list the category with id = 1)
 
-Mais testes use o testes.http no VsCode ou Postman/Insomnia
+More tests use the file teste.http inside VsCode or test with Postman/Insomnia
 
 ## License
 
